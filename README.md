@@ -4,15 +4,50 @@ Editor for rOpenSci software review of {saperlipopette}
 
 Review: https://github.com/ropensci/software-review/issues/754
 
+Upon submission
 
-* [ ] Check that template has been properly filled out.
-* [ ] Check against policies for fit and overlap. Initiate discussion via Slack #software-review channel if needed for edge cases that haven’t been caught by previous checks by the EiC. If reject, see this section about how to respond.
-* [ ] Check that mandatory parts of template are complete. If not, direct authors toward appropriate instructions.
-* [ ] For packages needing continuous integration on multiple platforms (cf criteria in this section of the CI chapter) make sure the package gets tested on multiple platforms (having the package built on several operating systems via GitHub Actions for instance).
-* [ ] Wherever possible when asking for changes, direct authors to automatic tools such as usethis and styler, and to online resources (sections of this guide, sections of the R packages book) to make your feedback easier to use. Example of editor’s checks.
-* [ ] Ideally, the remarks you make should be tackled before reviewers start reviewing.
-* [ ] If initial checks show major gaps, request changes before assigning reviewers. If the author mentions changes might take time, apply the holding label via typing @ropensci-review-bot put on hold. You’ll get a reminder every 90 days (in the issue) to check in with the package author(s).
-* [ ] If the package raises a new issue for rOpenSci policy, start a conversation in Slack or open a discussion on the rOpenSci forum to discuss it with other editors (example of policy discussion).
+* [ ] check output from ropensci-review-bot
+* [ ] check issue template has been properly filled out. Editors can edit directly for minor fixes or ask authors for to fill any fields that may be missing
+* [ ] check statistical properties including noteworthy (especially eg. loc and n_fns_...) 
+* [ ] check network visualisation of calls between objects:
+  * [ ] check if package has too few functions or lines of code, in which case it may be insufficiently developed for peer review.
+  * [ ] check if package is extremely large, in which case it may be too burdensome for reviewers. For example, these initial checks revealed a package with over 8,500 lines of R code (corresponding to 97.6% of all packages), and 251 exported R functions.
+
+
+Initial editorial comments
+
+* [ ] use the editor template to guide initial checks (within 5 working days)
+* [ ] check against policies for fit and overlap
+* [ ] ensure that the package gets tested on multiple platforms 
+* [ ] wherever possible when asking for changes, direct authors to automatic tools (eg. Air)
+* [ ] if initial checks show major gaps, request changes before assigning reviewers, consider applying holding label by calling @ropensci-review-bot put on hold
+
+Look for and assign two reviewers
+
+* [ ] `@ropensci-review-bot seeking reviewers`
+* [ ] use the email template if needed for inviting reviewers
+* [ ] check [finding reviewers](https://devguide.ropensci.org/softwarereview_editor.html#look-for-and-assign-two-reviewers) for finding reviewers
+* [ ] check [criteria for choosing a reviewer](https://devguide.ropensci.org/softwarereview_editor.html#criteria-for-choosing-a-reviewer)
+
+Assign reviewers
+
+* [ ] `@ropensci-review-bot assign @username as reviewer`
+* [ ] if you want to change the due date for a review use `@ropensci-review-bot set due date for @username to YYYY-MM-DD`
+
+During review
+
+* [ ] Upon each review being submitted,
+  * [ ] Write a comment thanking the reviewer in your own words.
+  * [ ] Record the review by typing a new comment `@ropensci-review-bot submit review <review-url> time <time in hours>`
+* [ ] upon changes being made, change the review status tag to 5/awaiting-reviewer-response, and request that reviewers indicate approval with the reviewer approval template
+
+After review
+
+* [ ] `@ropensci-review-bot approve <package-name>`
+
+Package promotion
+
+* [ ] direct the author to the chapters of the guide about package releases, marketing and GitHub grooming
 
 ## Resources
 
