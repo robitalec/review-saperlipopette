@@ -1,0 +1,211 @@
+---
+output:
+    html_notebook:
+        toc: true
+        toc_float: true
+editor_options:
+  chunk_output_type: inline
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+
+library(devtools)
+```
+
+# `saperlipopette` - package editor checks
+
+## **Editor:** [\@robitalec](https://github.com/robitalec)
+
+### Date:
+**`r cat(sprintf("**Last updated:** %s", Sys.Date()))`**
+
+***
+
+<br>
+
+This report documents the editor checks of **rOpenSci** submitted package:
+
+### **`saperlipopette`: ropensci/software-review**  issue [\#754](https://github.com/ropensci/software-review/issues/754).
+
+<br>
+
+## Package info
+
+**Description:**
+
+Holds functions creating Git messes, that users would then
+    solve, to follow <https://ohshitgit.com/>.
+
+**Author:** `r c(
+    person("Maëlle", "Salmon", , "msmaellesalmon@gmail.com", role = c("cre", "aut"),
+           comment = c(ORCID = "0000-0002-2815-0399")),
+    person("Jim", "Gardner", role = "ctb"),
+    person("Yanina Bellini", "Saibene", role = "aut",
+           comment = c(ORCID = "0000-0002-4522-7466")),
+    person("Steffi", "LaZerte", role = "rev",
+           comment = c("Steffi reviewed the 'saperlipopette, a risk-free playground for learning more Git' article.", ORCID = "0000-0002-7690-8360"))
+  )`
+
+**repo url:** <https://docs.ropensci.org/saperlipopette/,
+    https://github.com/ropensci-training/saperlipopette>
+
+**website url:** <https://docs.ropensci.org/saperlipopette/>
+
+## Review info
+
+
+#### See [editors guidelines](https://ropensci.github.io/dev_guide/editorguide.html) for further information on the rOpenSci editors checks process.
+
+**key editor checks:**
+
+
+
+<!--Please be respectful and kind to the authors in your reviews. The rOpenSci [code of conduct](https://github.com/ropensci/onboarding/blob/master/policies.md/#code-of-conduct) is mandatory for everyone involved in our review process.-->
+
+
+***
+
+### session info
+
+
+```{r sessionInfo}
+sessionInfo()
+```
+
+
+```{r pkg_dir, echo = F}
+pkg_dir <- "/home/alecr/Documents/Local-git/saperlipopette"
+```
+
+## Test installation
+
+### test local `saperlipopette` install:
+
+```{r test-local}
+install(pkg_dir, dependencies = TRUE, build_vignettes = TRUE)
+```
+
+```{r github-rm}
+remove.packages("saperlipopette")
+```
+#### **comments:**
+
+<!-- record comments on local install here -->
+
+***
+
+### test install of `saperlipopette` from GitHub with:
+
+```{r test-github}
+devtools::install_github("ropensci-training/saperlipopette", dependencies = TRUE, build_vignettes = TRUE)
+```
+
+#### **comments:**
+
+<!-- record comments on github install here -->
+
+***
+
+
+
+## Check package integrity
+
+### run checks on `saperlipopette` source:
+
+```{r check-checks}
+devtools::check(pkg_dir)
+```
+#### **comments:**
+
+<!-- record comments on checks here -->
+
+***
+
+### run tests on `saperlipopette` source:
+
+```{r check-tests}
+devtools::test(pkg_dir)
+```
+#### **comments:**
+
+<!-- record comments on tests here -->
+
+***
+
+
+### check `saperlipopette` for goodpractice:
+
+```{r test-goodpractice}
+goodpractice::gp(pkg_dir)
+```
+#### **comments:**
+
+<!-- record comments on goodpractice here -->
+
+***
+
+## Check package metadata files
+
+### inspect
+
+- #### [README](https://docs.ropensci.org/saperlipopette/,
+    https://github.com/ropensci-training/saperlipopette)
+- #### [DESCRIPTION](https://docs.ropensci.org/saperlipopette/,
+    https://github.com/ropensci-training/saperlipopette/blob/master/DESCRIPTION)
+
+### spell check
+
+```{r spell-check}
+devtools::spell_check(pkg_dir)
+```
+
+#### **comments:**
+
+<!-- record comments on metadata files here -->
+
+***
+
+## Review test suite:
+
+### test coverage
+
+```{r pkg_coverage}
+covr::package_coverage(pkg_dir)
+
+```
+
+### inspect [tests](https://docs.ropensci.org/saperlipopette/,
+    https://github.com/ropensci-training/saperlipopette/blob/master/tests/testthat)
+
+
+#### **comments:**
+
+<!-- record comments on testing suite here -->
+
+
+***
+
+
+### Reviewer assignment response:
+
+
+ropensci-training, could you please add the rOpenSci under review badge to your README?
+```
+[![](https://badges.ropensci.org/754_status.svg)](https://github.com/ropensci/software-review/issues/754)
+```
+
+---
+
+Reviewers:
+Due date:
+
+***
+
+
+
