@@ -96,7 +96,7 @@ remove.packages("saperlipopette")
 ```
 #### **comments:**
 
-<!-- record comments on local install here -->
+no issues
 
 ***
 
@@ -108,7 +108,7 @@ devtools::install_github("ropensci-training/saperlipopette", dependencies = TRUE
 
 #### **comments:**
 
-<!-- record comments on github install here -->
+no issues
 
 ***
 
@@ -123,7 +123,7 @@ devtools::check(pkg_dir)
 ```
 #### **comments:**
 
-<!-- record comments on checks here -->
+no issues
 
 ***
 
