@@ -7,20 +7,20 @@ Review: https://github.com/ropensci/software-review/issues/754
 Upon submission
 
 * [ ] check output from ropensci-review-bot
-* [ ] check issue template has been properly filled out. Editors can edit directly for minor fixes or ask authors for to fill any fields that may be missing
-* [ ] check statistical properties including noteworthy (especially eg. loc and n_fns_...) 
-* [ ] check network visualisation of calls between objects:
-  * [ ] check if package has too few functions or lines of code, in which case it may be insufficiently developed for peer review.
-  * [ ] check if package is extremely large, in which case it may be too burdensome for reviewers. For example, these initial checks revealed a package with over 8,500 lines of R code (corresponding to 97.6% of all packages), and 251 exported R functions.
+* [X] check issue template has been properly filled out. Editors can edit directly for minor fixes or ask authors for to fill any fields that may be missing
+* [X] check statistical properties including noteworthy (especially eg. loc and n_fns_...) 
+* [X] check network visualisation of calls between objects:
+  * [X] check if package has too few functions or lines of code, in which case it may be insufficiently developed for peer review.
+  * [X] check if package is extremely large, in which case it may be too burdensome for reviewers. For example, these initial checks revealed a package with over 8,500 lines of R code (corresponding to 97.6% of all packages), and 251 exported R functions.
 
 
 Initial editorial comments
 
-* [ ] use the editor template to guide initial checks (within 5 working days)
-* [ ] check against policies for fit and overlap
-* [ ] ensure that the package gets tested on multiple platforms 
-* [ ] wherever possible when asking for changes, direct authors to automatic tools (eg. Air)
-* [ ] if initial checks show major gaps, request changes before assigning reviewers, consider applying holding label by calling @ropensci-review-bot put on hold
+* [X] use the editor template to guide initial checks (within 5 working days)
+* [X] check against policies for fit and overlap
+* [X] ensure that the package gets tested on multiple platforms 
+* [X] wherever possible when asking for changes, direct authors to automatic tools (eg. Air)
+* [X] if initial checks show major gaps, request changes before assigning reviewers, consider applying holding label by calling @ropensci-review-bot put on hold
 
 Look for and assign two reviewers
 
