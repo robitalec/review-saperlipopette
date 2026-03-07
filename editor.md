@@ -6,9 +6,9 @@
     - [X] Are vignettes readable, sufficiently detailed and not just perfunctory?
 - [X] **Fit**: The package meets criteria for [fit](https://devguide.ropensci.org/policies.html#package-categories) and [overlap](https://devguide.ropensci.org/policies.html#overlap).
 - [X] **Installation instructions:** Are installation instructions clear enough for human users?
-- [ ] **Tests**: If the package has some interactivity / HTTP / plot production etc. are the tests using [state-of-the-art tooling](https://devguide.ropensci.org/building.html#testing)?
-- [ ] **Contributing information**: Is the documentation for contribution clear enough e.g. tokens for tests, playgrounds?
-- [ ] **License:** The package has a CRAN or OSI accepted license.
+- [X] **Tests**: If the package has some interactivity / HTTP / plot production etc. are the tests using [state-of-the-art tooling](https://devguide.ropensci.org/building.html#testing)?
+- [X] **Contributing information**: Is the documentation for contribution clear enough e.g. tokens for tests, playgrounds?
+- [X] **License:** The package has a CRAN or OSI accepted license.
 - [X] **Project management**: Are the issue and PR trackers in a good shape, e.g. are there outstanding bugs, is it clear when feature requests are meant to be tackled?
 ---
 
@@ -335,3 +335,34 @@ helper_test_exo <- function(fn, nm) {
 ```
 
 Thanks! Let me know what you think. 
+
+
+---
+
+
+| Yes, one is for R (LICENSE) the other for GitHub-readability (LICENSE.md). That's what usethis::use_mit_license() creates. See also https://r-pkgs.org/license.html#key-files
+
+Thanks for explaining - I've somehow missed that setup in the past!
+
+| Thank you! I added a bit in a commit -- do you think that is enough or too little information? It's the first time I start a contributing guide from scratch as opposed to a standard template, maybe that's too minimalist. 😅
+
+That looks good to me!
+
+| I've now updated this field but can increase the version again if I do more changes before you start looking for reviewers.
+
+Thanks!
+
+| If I remember correctly that's what I first tried doing but the script does a bit more: changing header levels, copying the picture. Do you think that makes sense?
+
+Yes, if those additional bits are needed, I think the script makes sense then. 
+
+| Oh yes you are right! I never run devtools::test() from my console so hadn't noticed. Once I did, I was able to reproduce the test failures. I have updated the code so that it never creates the RStudio project files when testing.
+
+Great, all tests are now passing on my system (with two skipped related to potools since I'm running Linux). 
+
+| Thank you for experimenting! I prefer seeing explicitly what's done in each test file even if that's repetitive so would prefer not to change but am happy to hear further reasons. 😉
+
+No pressure at all, it was just an idea. I understand why you'd want to see it written out explicitly in each test file as well. 
+
+Thanks for helping me with these, I'm going to start looking for reviewers now!
+
